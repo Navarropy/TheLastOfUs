@@ -1,0 +1,919 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+@font-face {
+    font-family: 'Open Sans Light';
+    font-style: normal;
+    font-weight: 300;
+    src:url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRa1RVmPjeKy21_GQJaLlJI.woff) format('woff');
+ }
+
+* {
+    box-sizing: border-box;
+}
+
+.price {
+    margin: 5% 5% 5% 0;
+    font-size: 30px;
+}
+
+.add-to-cart {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    
+    .add {
+        width: 40vw;
+        background: #d63d00;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        padding: 1%;
+        color: white;
+        font-weight: bold;
+    }
+
+    .like {
+        width: 30%; 
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 5%;
+        align-items: center;
+
+        svg {
+
+            &:hover {
+                height: 100%;
+                fill: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
+
+.title {
+    position: relative;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2, h3, h4 {
+        font-family: 'Open Sans Light';
+        font-size: 35px;
+    }            
+}
+
+body {
+    margin: 0;
+    background: #1F1F1F;
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    color: white;
+
+    .top {
+        width: 100%;
+        min-height: 100vh;
+        font-family: "open sans";
+        background-image: url("https://meups.com.br/wp-content/uploads/2022/06/The-Last-of-Us-Part-I-Tudo-sobre.jpg");
+        background-size: cover;
+        background-position: -50% 10%;
+        background-repeat: no-repeat;
+        position: relative;
+
+        .trigger-warnings {
+            transform: scale(0.5);
+            position: absolute;
+            bottom: 2%;
+            right: 1%;
+            min-height: 2vh;
+            width: 35vw;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .warnings {
+                height: 100%;
+                width: 80%;
+                margin-left: 5%;
+                font-size: 2vw;
+            }
+
+            img {
+                height: 30%;
+                width: 20% !important;
+            }
+        }
+
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgb(31,31,31);
+            background: linear-gradient(0deg, rgba(31,31,31,1) 10%, rgba(31,31,31,0) 100%, rgba(0,212,255,0) 100%);
+        }
+
+        .game-info {
+            position: relative;
+            min-height: 90vh;
+            width: 50vw;
+            padding: 2%;
+            background: rgb(31,31,31);
+            background: linear-gradient(90deg, rgba(31,31,31,1) 58%, rgba(0,212,255,0) 100%);
+
+            .wrapper {
+                position: relative;
+                bottom: 20%;
+                top: 0;
+                right: 0;
+                min-width: 100%;
+                min-height: 100%;
+                $move: 70px;
+                transform: scale(0.8) translateY($move) translateY(-($move));
+                display: flex;
+                flex-direction: column;
+            }
+
+            p {
+                font-weight: bold;
+            }
+
+            h1 {
+                font-size: 70px;
+                font-weight: 10;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+
+            }
+
+            .console {
+                position: relative;
+                display: inline-block;
+
+                span {
+                    font-size: 10px;
+                    letter-spacing: 1px;
+                    font-weight: bold;
+                    padding: 1% 2% 1% 2%;
+                    border: 2px solid white;
+                }
+            }
+
+            .release-date {
+                margin: 5% 5% 5% 0;
+            }
+
+            .specifications {
+                display: flex;
+                position: relative;
+
+                ul {
+                    list-style: none;
+                    padding-left: 0 !important;
+                    position: relative;
+                    padding: 0 !important;
+                    min-height: 20vh;
+                    width: 50%;
+                    
+                    li {
+                        padding-left: 0 !important;
+                        display: flex;
+                        align-items: center;
+                        color: white;
+                        margin-top: 3%;
+
+                        svg {
+                            fill: white;
+                            margin-right: 3%;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+
+    .slider_wrapper {
+        position: relative;
+        width: 100vw;
+        min-height: 45vh;
+        background: #1F1F1F;
+
+        .slider_container {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            min-height: 100%;
+            display: flex;
+            overflow-x: hidden;
+            background: #1F1F1F;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .btn {
+                position: absolute;
+                width: 4vw;
+                min-height: 100%;
+                z-index: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                svg {
+                    width: 100%;
+                    height: 100%;
+                    fill: white;
+                }
+            }
+            
+            $btn-size: 1%;
+            .left {
+                left: $btn-size;
+            }
+
+            .right {
+                right: $btn-size;
+
+            }
+            .slides_wrapper {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                .slides {
+                    position: relative;
+                    display: flex;
+                    justify-content: flex-start;
+                    width: 100%;
+                    min-height: 33vh;
+                    padding: 1%;
+
+                    &:not(:first-child) {
+                        display: none;
+                        margin-left: 0 !important;
+                    }
+
+                    .item {
+                        position: relative;
+                        min-height: 33vh;
+                        width: 15vw;
+                        background: pink;
+                        border-radius: 7px;
+                        -webkit-box-shadow: 0px 5px 13px -1px #000000; 
+                        box-shadow: 0px 5px 13px -1px #000000;
+                        margin-left: 0.5% !important;
+                        transition: all ease-in-out 0.5;
+                    }
+
+                    .active {
+                        height: 36vh;
+                        min-width: 28vw;
+
+                    }
+                }
+    
+                .selectors {
+                    position: relative;
+                    width: 100%;
+                    min-height: 5vh;
+                    background: rgb(128, 0, 64);
+                }
+            }
+        }
+    }
+
+    .game-overview {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "open sans";
+
+        .background {
+            position: absolute;
+            background: url("https://i.ytimg.com/vi/pdo3X6J3DVs/maxresdefault.jpg");
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            opacity: 0.2;
+        }
+        
+        .left {
+            position: relative;
+            min-height: 63vh;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            letter-spacing: 2px;
+
+            .game-overview-title {
+                text-transform: uppercase;
+                font-size: 15px;
+                font-weight: 300 !important;
+                margin: none !important;
+                padding: none !important;
+                height: auto !important;
+                text-align: left;
+
+            }
+
+            span {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 30px;
+                padding: 0 !important;
+            }
+        }
+
+        .right {
+            position: relative;
+            height: 80%;
+            width: 40%;
+            left: 5%;
+            font-size: 15px;
+        }
+    }
+
+    .key-features {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        background: #121314;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 5%;
+
+        h3 {
+            font-size: 14px;
+            display: flex;
+        }
+
+
+        .cards {
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            font-family: 'Open Sans Light';
+
+            .card {
+                position: relative;
+                width: 25%;
+                margin-right: 3%;
+
+                img {
+                    width: 90%;
+                    height: auto;
+                    border-radius: 5px;
+                    -webkit-box-shadow: 0px 5px 13px -1px #000000; 
+                    box-shadow: 0px 5px 13px -1px #000000;
+                }
+
+                p {
+                    font-size: 13px;
+                    width: 90%;
+                    color: #A7A7A7;
+                    font-family: "Open Sans";
+                    text-align: justify;
+                }
+            }
+        }
+    }
+
+    .buy {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #F5F7FA;
+        color: black;
+
+        .title {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .buying-options {
+            position: relative;
+            width: 98%;
+            min-height: 50vh;
+            color: black;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            font-family: "Open Sans";
+            font-weight: 300;
+
+            .subtitle {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            img {
+                width: 100%;
+                display: flex;
+                align-self: center;
+            }
+
+            @mixin buyCard {
+                position: relative;
+                min-height: 100%;
+                width: 49%;
+                display: flex;
+                flex-direction: column;
+                background: white;
+                padding: 2%;
+
+                .specifications {
+                    display: flex;
+
+                    ul {
+                        min-height: 50vh;
+                        color: #5f5f5f;
+                    }
+                }
+
+                .add-to-cart {
+
+                    .like {
+                        width: 10%;
+                    }
+                }
+            }
+            
+            .left {
+                @include buyCard;
+            }
+
+            .right {
+                @include buyCard;
+            }
+        }        
+    }
+
+    .Blu-ray {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+        background: white;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font-family: "Open Sans Light";
+        font-weight: 300;
+
+        .cards {
+            position: relative;
+            width: 90vw;
+            min-height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .card {
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                flex-direction: column;
+                width: 49%;
+                min-height: 85vh;
+
+                img {
+                    border-radius: 15px;
+                }
+
+                @mixin button($color) {
+                    width: auto;
+                    background: $color;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 13px;
+                    padding: 1% 4% 1% 4%;
+                    border-radius: 15px;
+                }
+
+                .sold-out {
+                    @include button(#3aa2f8);
+                }
+
+                .buy-now {
+                    @include button(#d53b00);
+                }
+            }
+        }
+
+
+    }
+
+    .from-ground-up {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 3%;
+        font-family: "Open Sans Light";
+        font-weight: bold;
+        position: relative;
+
+        p {
+            color: #A7A7A7;
+            font-size: 14px;
+        }
+
+        .characters-title {
+            font-size: 35px;
+            padding-bottom: 0 !important; 
+        }
+
+        .character-video-wrapper {
+            position: relative;
+            width: 100%;
+            margin-top: 3%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .nav {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100vw;
+                min-height: 1vh;
+                font-family: "Open Sans Light";
+                font-weight: bold;
+
+                .character {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1% 1.5% 1% 1.5%;
+                    opacity: 0.5;
+                    cursor: pointer;
+
+                    span {
+                        &:hover {
+                            opacity: 0.8;
+                            transition: opacity ease-in-out 0.5s;
+                        }
+                    }
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        height: 4px;
+                        background: #363636;
+                    }                
+                }
+
+                .active {
+                    opacity: 1;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        height: 4px;
+                        background: #0072CE;
+                    }  
+                }
+
+            }
+            // End of nav.
+
+            .video {
+                width: 90%;
+                height: 90vh;
+                margin-top: 1%;
+                padding: 3%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+
+                video {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                }
+            }
+
+        }
+    }
+    // End of from-ground-up
+
+    .ps5-features {
+        padding-top: 5%;
+        padding-bottom: 5%;
+        width: 100vw;
+        min-height: 100vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        background: #FFFFFF;
+        font-family: "Open Sans";
+
+        img {
+            position: relative;
+            height: 30%;
+            width: 30%;
+        }
+
+        .features {
+            position: relative;
+            width: 40%;
+            color: rgb(72, 72, 72);
+
+            h2 {
+                font-size: 40px;
+            }
+
+            ul {
+                li {
+                    margin-top: 5%;
+                    list-style: square;
+
+                    .strong {
+                        font-family: "Open Sans";
+                        font-weight: bold;
+                        color: black !important;
+                    }
+                }
+            }
+        }
+        
+    }
+    // End of ps5-features
+
+    .latest-news {
+        position: relative;
+        width: 100vw;
+        min-height: 1vh;
+        background: #121314;
+        font-family: "Open Sans";
+        
+        span {
+            font-size: 15px;
+        }
+        
+        .slides {
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .slide {
+                position: relative;
+                min-height: 70vh;
+                width: 25vw;
+                margin-left: 2%;
+                border-radius: 15px;
+                background: #1F1F1F;
+                padding: 1%;
+                pointer-events: none;
+
+                ::selection {
+                    background: none;
+                }
+                
+                p {
+                    font-size: 12px;
+                    color: rgb(162, 162, 162);
+                }
+                
+                img {
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+    // End of latest-news
+    
+    footer {
+        position: relative;
+        min-height: 20vh;
+        width: 100%;
+        background: #00439c;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        .footer-wrapper {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 0 0 3% 3%;
+            font-family: 'Open Sans Light';
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+    .title {
+        text-align: center;
+    }
+
+    .top {
+        background-position: 35% 10% !important;
+    }
+
+    .game-overview {
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+        .left {
+            min-height: 20vh !important;
+        }
+    }
+  }
+
+  @media only screen and (max-width: 700px) {
+    .game-info {
+        width: 100% !important;
+        height: 100% !important;
+        .wrapper {
+            position: relative;
+            width: 100% !important;
+            height: 100% !important;
+        }
+
+        h1 {
+            font-size: 35px !important;
+        }
+
+    }
+
+    .game-overview {
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        .left {
+            width: 100% !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .game-overview-title {
+                font-size: 10px !important;
+            }
+
+            span {
+                font-size: 15px !important;  
+                text-align: center;              
+            }
+
+        }
+
+        .right {
+            margin-top: 4%;
+            width: 100% !important;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            p {
+                font-size: 13px !important;
+            }
+        }
+    }
+
+    .key-features {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .cards {
+            flex-direction: column !important;
+            
+            
+            .card {
+                margin-top: 15%;
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center !important;
+                align-items: center !important;
+            }
+        }
+
+    }
+
+    .buying-options {
+        display: flex;
+        flex-direction: column !important;
+        .left {
+            width: 100% !important;
+        }
+        .right {
+            margin-top: 40%;
+            width: 100% !important;
+        }
+    }
+
+    .Blu-ray {
+        .cards {
+            display: flex;
+            flex-direction: column !important;
+
+            .card {
+                margin-top: 20%;
+                padding-bottom: 10%;
+                width: 100% !important;
+
+                .button {
+                    width: 80% !important;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    .ps5-features {
+        img {
+            display: none !important;
+        }
+        .features {
+            width: 100% !important;
+            text-align: center;
+
+            ul {
+                text-align: left !important;
+                li {
+                    width: 100% !important;
+                }                    
+            }
+        }
+    }
+
+    .slides {
+        flex-direction: column !important;
+        padding-bottom: 5%;
+        .slide {
+            margin-top: 25%;
+            width: 95% !important;
+            justify-content: center !important;
+            margin-left: 0 !important;
+
+            span {
+                font-size: 25px !important;
+            }
+
+            p {
+                font-size: 20px !important; 
+            }
+        }
+    }
+  }
