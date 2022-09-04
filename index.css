@@ -48,7 +48,7 @@
 
 .title {
   position: relative;
-  height: 40vh;
+  min-height: 40vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -668,9 +668,14 @@ body {
   }
 }
 @media only screen and (max-width: 700px) {
+  .top {
+    background-position: center !important;
+  }
   .game-info {
     width: 100% !important;
     height: 100% !important;
+    background: rgb(31, 31, 31) !important;
+    background: linear-gradient(0deg, rgb(31, 31, 31) 0%, rgb(31, 31, 31) 34%, rgba(14, 132, 155, 0) 100%, rgba(0, 212, 255, 0) 100%, rgba(31, 31, 31, 0) 100%) !important;
   }
   .game-info .wrapper {
     position: relative;
@@ -731,6 +736,9 @@ body {
   .buying-options {
     display: flex;
     flex-direction: column !important;
+  }
+  .buying-options ul {
+    min-height: 1vh !important;
   }
   .buying-options .left {
     width: 100% !important;
